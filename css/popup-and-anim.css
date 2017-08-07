@@ -1,0 +1,241 @@
+/*---pop-up login window---*/
+
+.modal-content {
+    display: none;
+    position: fixed;
+    top: 120px;
+    left: 50%;
+    width: 300px;
+    padding: 50px 80px;
+    margin-left: -230px;
+    color: #000;
+    background: #f8f3f0 url("../png/bgi_other-page.png") repeat;
+    box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
+    z-index: 20;
+}
+
+.modal-content-close {
+    position: absolute;
+    top: 0;
+    right: -34px;
+    font-size: 0;
+    width: 22px;
+    height: 22px;
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.modal-content-close::before,
+.modal-content-close::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 2px;
+    width: 19px;
+    height: 3px;
+    background-color: #d0d0d0;
+    border-radius: 1px;
+}
+
+.modal-content-close::before {
+    transform: rotate(45deg);
+}
+
+.modal-content-close::after {
+    transform: rotate(-45deg);
+}
+
+.modal-content h2 {
+    margin: 0;
+    margin-bottom: 20px;
+    font-size: 30px;
+    line-height: 42px;
+}
+
+.modal-content p {
+    margin: 0;
+    margin-bottom: 14px;
+}
+
+.modal-content .login-form {
+    margin-top: 14px;
+    margin-bottom: 10px;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    width: 236px;
+    margin: 0;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    padding-right: 40px;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 700;
+    font-family: "PT Sans Narrow", "Arial", sans-serif;
+    color: #000;
+    text-transform: uppercase;
+    background-color: #f9f6f3;
+    border: 2px solid #000;
+    outline: none;
+}
+
+.login-form input:focus {
+    border-color: #663d15;
+}
+
+.login-form input.icon-user {
+    background-image: url("../png/spritesheet-log-form.png");
+    background-repeat: no-repeat;
+    background-position: 103% -63px;
+}
+
+.login-form input.icon-password {
+    background-image: url("../png/spritesheet-log-form.png");
+    background-repeat: no-repeat;
+    background-position: 103% -7px;
+}
+
+.modal-content .restore {
+    color: #000;
+    float: right;
+}
+
+.modal-content label input[type="checkbox"] {
+    display: none;
+}
+
+.modal-content label {
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+}
+
+.modal-content label:hover {
+    color: #663d15;
+}
+
+.modal-content label input[type="checkbox"]+.checkbox-indicator {
+    position: absolute;
+    top: -3px;
+    left: 0;
+    width: 17px;
+    height: 17px;
+    border: 2px solid #000;
+}
+
+.modal-content label input[type="checkbox"]:checked+.checkbox-indicator::before,
+.modal-content label input[type="checkbox"]:checked+.checkbox-indicator::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 1px;
+    width: 15px;
+    height: 2px;
+    background-color: #000;
+}
+
+.modal-content label input[type="checkbox"]:checked+.checkbox-indicator::before {
+    transform: rotate(45deg);
+}
+
+.modal-content label input[type="checkbox"]:checked+.checkbox-indicator::after {
+    transform: rotate(-45deg);
+}
+
+.modal-content .btn {
+    width: 100%;
+    margin-top: 10px;
+}
+
+/*---END pop-up login window---*/
+
+/*---pop-up map window---*/
+
+.modal-content-map {
+    display: none;
+    width: 766px;
+    height: 561px;
+    background: #e9e5dc url("../img/map.jpg") no-repeat;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -383px;
+    margin-top: -280px;
+    border: 7px solid white;
+    box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
+    z-index: 20;
+}
+
+/*---END pop-up map window---*/
+
+/*---overlay---*/
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/*---END overlay---*/
+
+/*---Animatiton CSS---*/
+
+@keyframes bounce {
+    0% {
+        transform: translateY(-1000px);
+    }
+    70% {
+        transform: translateY(30px);
+    }
+    90% {
+        transform: translateY(-10px);
+    }
+    95% {
+        transform: translateY(5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.modal-content-show {
+    display: block;
+}
+
+.anim {
+    animation: bounce 0.6s;
+}
+
+@keyframes shake {
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: translateX(-10px);
+    }
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: translateX(10px);
+    }
+}
+
+.modal-error {
+    animation: shake 0.6s;
+}
+
+/*---END Animatiton CSS---*/

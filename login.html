@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Барбершоп &laquo;Бородинский&raquo;</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/popup-and-anim.css">
+</head>
+
+<body class="other-page">
+    <header class="main-header">
+        <div class="container clearfix">
+            <nav class="main-navigation">
+                <a href="index.html" class="logo-inner">
+                    <img src="png/Logo.png" width="111" height="24" alt="Барбершоп Бородинский">
+                </a>
+                <ul>
+                    <li><a href="#">Информация</a></li>
+                    <li><a href="#">Новости</a></li>
+                    <li><a href="price-list.html">Прайс-лист</a></li>
+                    <li><a href="catalog.html">Магазин</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="user-block">
+                <a href="#" class="login">Вход</a>
+            </div>
+        </div>
+    </header>
+    <main class="container">
+        <div class="page-header">
+            <h1 class="page-title">Вход в личный кабинет</h1>
+            <ul class="breadcrumbs">
+                <li><a href="index.html">Главная</a></li>
+                <li class="your-location">Вход в личный кабинет</li>
+            </ul>
+        </div>
+        <div class="login-form-page">
+        <p>Введите свой логин и пароль</p>
+        <form action="https://echo.mysite.ru" method="post" class="login-form">
+            <input type="text" class="icon-user" name="user" placeholder="Логин"><br>
+            <input type="password" class="icon-password" name="password" placeholder="Пароль"><br>
+            <label сlass="login-checkbox">
+               <input type="checkbox" name="remember">
+               <span class="checkbox-indicator"></span>
+               Запомните меня
+           </label>
+            <a href="#" class="restore">Я забыл пароль</a>
+            <button class="btn" type="submit">Войти</button>
+        </form>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container clearfix">
+            <section class="footer-contact">
+                Барбершоп &laquo;Бородинский&raquo;<br> Адрес: г. Санкт-Петербург, Б. Конюшенная, д. 19/8<br>
+                <a href="contacts.html" class="map-link">Как нас найти?</a><br> Телефон: +7 (812) 565-02-57
+            </section>
+            <section class="footer-social">
+                <p>Давайте дружить!</p>
+                <a href="#" class="social-btn social-btn-vk">Вконтакте</a>
+                <a href="#" class="social-btn social-btn-fb">Фейсбук</a>
+                <a href="#" class="social-btn social-btn-inst">Инстаграм</a>
+            </section>
+            <section class="footer-copyright">
+                <p>Разработано</p>
+                <a href="https://htmlacademy.ru" class="btn">HTML Academy</a>
+            </section>
+        </div>
+    </footer>
+
+    <div class="modal-content">
+        <button class="modal-content-close" type="button" title="Закрыть">
+           Закрыть
+       </button>
+        <h2 class="modal-content-title">Личный кабинет</h2>
+        <p>Введите свой логин и пароль</p>
+        <form action="https://echo.mysite.ru" method="post" class="login-form">
+            <input type="text" class="icon-user" name="user" placeholder="Логин">
+            <input type="password" class="icon-password" name="password" placeholder="Пароль">
+            <label сlass="login-checkbox">
+               <input type="checkbox" name="remember">
+               <span class="checkbox-indicator"></span>
+               Запомните меня
+           </label>
+            <a href="#" class="restore">Я забыл пароль</a>
+            <button class="btn" type="submit">Войти</button>
+        </form>
+    </div>
+    <div class="modal-content-map">
+        <button class="modal-content-close" type="button" title="Закрыть">
+           Закрыть
+       </button>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6000760813474!2d30.321795838329667!3d59.938778058850936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1496771007437" width="766" height="561" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
+    <div class="modal-overlay"></div>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
